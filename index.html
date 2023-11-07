@@ -1,0 +1,106 @@
+<html>
+<head>
+<style>
+#div1, #div2, #div3, #div4, #div5, #div6 {
+	width: 100px;
+	height: 35px;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+#div7, #div8, #div9, #div10, #div11, #div12 {
+	float: center;
+	width: 100px;
+	height: 35px;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+</body>
+
+<h2>Drag and Drop</h2>
+<p>Arraste a imagem entre as duas divs.</p>
+<table>
+	<td>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop"(event)>
+	<img src="./img/download.jpg"	draggable="true" ondragstart="drag(event)" id="drag1" widht="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop"(event)>
+	<img src="./img/download (2).jpg"	draggable="true" ondragstart="drag(event)" id="drag2" widht="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop"(event)>
+	<img src="./img/gigante.jpg"	draggable="true" ondragstart="drag(event)" id="drag3" widht="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop"(event)>
+	<img src="./img/mosqueteira.png"	draggable="true" ondragstart="drag(event)" id="drag4" widht="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop"(event)>
+	<img src="./img/cr7.jpg"	draggable="true" ondragstart="drag(event)" id="drag5" widht="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop"(event)>
+	<img src="./img/cr7.jpg"	draggable="true" ondragstart="drag(event)" id="drag6" widht="88" height="31">
+</div>
+
+</td>
+</div>
+
+<td>
+	<div id="div7" ondrop="drop(event)" ondragover="allowDrop (event)">Gigante</div>
+	<div id="div8" ondrop="drop(event)" ondragover="allowDrop (event)">mosqueteira</div>
+	<div id="div9" ondrop="drop(event)" ondragover="allowDrop (event)"></div>
+	<div id="div10" ondrop="drop(event)" ondragover="allowDrop (event)">Pekka</div>
+	<div id="div11" ondrop="drop(event)" ondragover="allowDrop (event)"></div>
+	<div id="div12" ondrop="drop(event)" ondragover="allowDrop (event)">Rei</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+	
+	
+	
